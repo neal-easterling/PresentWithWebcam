@@ -12,94 +12,84 @@
 <body>
     <div class="pageContainer">
         <div class="instructionsModal"></div>
+        <div class="settingsContainer active">
+            <div class="settingsOptions">
+                <div class="settingsGridContainer">
+                    <h2>Settings</h2>
+                    <h3 class="buttonHeader"> Webcam </h3>
+                    <div class="buttonContainer shape">
+                        <h5 class="buttonLabel"> Shape</h5>
+                        <button id="circle" class="circle"></button>
+                        <button id="square" class="square active"></button>
+                        <button id="rectangle" class="rectangle"></button>
+                    </div>
+                    <div class="buttonContainer sizeC">
+                        <h5 class="buttonLabel"> Size</h5>
+                        <button id="smallC" class="icon square small"></button>
+                        <button id="mediumC" class="icon square medium"></button>
+                        <button id="largeC" class="icon square full"></button>
+                    </div>
+                    <div class="buttonContainer mirror">
+                        <h5 class="buttonLabel">Mirror</h5>
+                        <button id="mirror" class="icon toggle active">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="buttonContainer hide">
+                        <h5 class="buttonLabel">Hide</h5>
+                        <button id="mirror" class="icon toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="buttonLabel"> Presentation </h3>
+                    <div class="buttonContainer ratio">
+                        <h5 class="buttonLabel">Ratio</h5>
+                        <button id="square" class="icon square"></button>
+                        <button id="standard" class="icon rectangle"></button>
+                        <button id="widescreen" class="widescreen active"></button>                    
+                    </div>
+                    <div class="buttonContainer sizeP">
+                        <h5 class="buttonLabel"> Size</h5>
+                        <button id="smallP" class="icon square small"></button>
+                        <button id="mediumP" class="icon square medium active"></button>
+                        <button id="largeP" class="icon square"></button>
+                    </div>
+                    <div class="buttonContainer changeP">
+                        <h5 class="buttonLabel">change</h5>
+                        <button id="changeP" class="icon toggle goTo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                              </svg>                                                                                         
+                        </button>
+                    </div>
+                </div>
+                <div class="buttonContainer instructionsToggle">
+                    <h5 class="buttonLabel">Instructions</h5>
+                    <button id="show" class="toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="settingsToggle active">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" width="30">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+            </div>
+        </div>
         <div class="webcamContainer">
             <video class="hidden" id="webcamStream"></video>  
         </div>
         <div class="presContainer">
             <iframe id="presentation" class="hidden"></iframe>
         </div>
-        <div class="controlsContainer active">
-            
-            <div class="controlOptions">
-                <h2>Settings</h2>
-                <hr />
-                <h3 class="buttonHeader"> Webcam </h3>
-                <div class="buttonContainer sizeC">
-                    <h4 class="buttonHeader"> Size</h4>
-                    <button id="smallC"></button>
-                    <button id="mediumC" class="active"></button>
-                    <button id="largeC"></button>
-                </div>
-                <div class="buttonContainer flip">
-                    <h4 class="buttonHeader">Mirror</h4>
-                    <button id="mirror" class="toggle active"><span></span></button>
-                </div>
-                <div class="buttonContainer hide">
-                    <h4 class="buttonHeader">Hide</h4>
-                    <button id="mirror" class="toggle active"><span></span></button>
-                </div>
-                <hr />
-                <div class="buttonContainer ratio">
-                    <h3 class="buttonHeader"> Presentation </h3>
-                    <h4 class="buttonHeader">Aspect Ratio</h4>
-                    <button id="square"></button>
-                    <button id="standard"></button>
-                    <button id="widescreen" class="active"></button>                    
-                </div>
-                <div class="buttonContainer sizeP">
-                    <h4 class="buttonHeader"> Size</h4>
-                    <button id="smallP"></button>
-                    <button id="mediumP" class="active"></button>
-                    <button id="largeP"></button>
-                </div>
-                <div class="buttonContainer changeP">
-                    <h4 class="buttonheader">Slideshow</h4>
-                    <button id="changeP">Change Link</button>
-                </div>
-                <hr />
-                <div class="buttonContainer instructions">
-                    <h4 class="buttonHeader">Show Instructions</h4>
-                    <button id="show" class="toggle"><span></span></button>
-                </div>
-            </div>
-            <div class="controlsToggle active">
-                <svg class="icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1269 1280">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                    fill="#000000" stroke="none">
-                    <path d="M6185 12793 c-802 -46 -1899 -350 -2688 -744 -138 -69 -203 -106
-                    -334 -191 -122 -80 -128 -92 -127 -263 1 -205 47 -380 236 -890 128 -344 188
-                    -521 188 -548 0 -15 -13 -29 -40 -45 -180 -103 -670 -638 -790 -864 -17 -31
-                    -39 -60 -50 -63 -54 -17 -222 38 -641 210 -393 162 -565 224 -714 261 -109 26
-                    -222 32 -247 12 -42 -35 -258 -455 -366 -713 -284 -682 -512 -1532 -588 -2192
-                    -11 -90 -18 -229 -18 -355 l-1 -206 30 -42 c41 -58 129 -108 266 -153 152 -49
-                    282 -78 610 -132 280 -46 327 -55 437 -81 87 -21 138 -40 173 -64 25 -18 29
-                    -28 29 -68 0 -60 23 -188 56 -317 78 -305 247 -756 339 -907 30 -48 34 -60 25
-                    -83 -27 -70 -116 -152 -515 -467 -379 -300 -526 -441 -568 -547 l-17 -42 47
-                    -82 c479 -839 1602 -1934 2396 -2333 68 -35 73 -36 122 -25 82 18 151 66 275
-                    189 123 123 193 207 410 492 233 307 339 420 395 420 13 0 56 -16 97 -35 235
-                    -113 876 -267 1173 -282 87 -4 125 -10 138 -21 38 -34 76 -201 127 -567 60
-                    -427 102 -638 158 -805 37 -107 61 -154 108 -209 l38 -44 201 6 c266 8 461 33
-                    780 98 654 134 1435 428 2006 754 212 122 322 199 342 240 25 53 22 169 -7
-                    285 -40 155 -75 242 -310 762 -87 194 -129 318 -124 374 3 35 9 43 64 79 109
-                    72 206 156 394 345 246 245 443 478 500 591 24 47 52 54 135 34 89 -20 203
-                    -64 553 -211 314 -132 537 -212 664 -238 77 -16 184 -21 223 -10 22 6 83 100
-                    173 269 309 580 582 1498 691 2320 38 288 45 392 46 635 0 271 -2 280 -66 334
-                    -118 100 -331 156 -889 236 -358 51 -505 86 -542 128 -10 10 -18 48 -22 97
-                    -15 174 -68 391 -170 697 -77 233 -154 424 -200 497 -18 28 -26 51 -22 65 15
-                    60 132 171 371 354 385 294 610 492 686 605 57 86 58 100 19 172 -491 890
-                    -1668 2117 -2374 2472 -58 29 -76 34 -109 29 -141 -23 -315 -183 -609 -558
-                    -279 -356 -322 -409 -392 -480 -41 -41 -89 -81 -105 -88 -28 -11 -37 -9 -103
-                    23 -170 84 -479 170 -833 232 -132 23 -343 45 -376 38 -75 -15 -111 92 -164
-                    482 -57 427 -77 565 -96 665 -41 214 -102 385 -156 442 l-27 28 -135 -2 c-75
-                    -1 -158 -3 -186 -5z m582 -5049 c292 -43 530 -160 713 -350 186 -193 289 -407
-                    347 -719 26 -141 26 -497 0 -640 -97 -531 -441 -886 -965 -995 -286 -60 -649
-                    -42 -897 43 -470 162 -753 531 -825 1070 -15 114 -12 372 5 485 92 612 500
-                    1017 1115 1106 132 19 379 19 507 0z"/>
-                    </g>
-                </svg>
-            </div>
-            
+        
         </div>
         <footer><p>version: 1.2 | &copy; 2023</p></footer>
     </div>
