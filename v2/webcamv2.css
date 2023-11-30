@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 500ms ease;
+    transition: all 400ms ease;
 }
 body{
     height: 100dvh;
@@ -17,10 +17,11 @@ body{
     background-image: linear-gradient(-135deg, #111, #333);
 }
 h2{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 h3{
     font-size: 1rem;
+    margin: 0rem;
 }
 h4{
     font-size: 0.8rem;
@@ -31,6 +32,19 @@ video{
 iframe{
     border: none;
     background-color: #444;
+}
+button{
+    margin: 0.5rem;
+    background-color: #333;
+    border: none;
+    box-shadow: 2px 2px 3px #111, inset 0 0 4px #111;
+}
+button.active{
+    background-color: #00aaee;
+}
+hr{
+    border: 1px solid #333;
+    margin: 2rem 0;
 }
 .controlsContainer{
     position: absolute;
@@ -67,25 +81,16 @@ iframe{
 .buttonContainer{
     margin: 1rem;
 }
-.buttonContainer button{
-    background-color: #333;
-    border: none;
-    box-shadow: 2px 2px 3px #111, inset 0 0 4px #111;
-    
-}
-.buttonContainer.size button{
+
+.buttonContainer.sizeC button{
     min-width: 10px;
     aspect-ratio: 1/1;
-    margin: 0.5rem;
     border-radius: 50%;
 }
-.buttonContainer.size button.active{
-    background-color: #00aaee;
-}
-#medium{
+#mediumC{
     width: 15px;
 }
-#large{
+#largeC{
     width: 20px;
 }
 
@@ -95,6 +100,9 @@ button.toggle{
     border-radius: 0.25rem;
     margin: 0 auto;
     position: relative;
+}
+button.toggle.active{
+    background-color: #333;
 }
 button.toggle span{
     width: 1rem;
@@ -117,9 +125,6 @@ button.toggle.active span{
     margin: 0.5rem;
     border-radius: 0.25rem;
 }
-.buttonContainer.ratio button.active{
-    background-color: #00aaee;
-}
 #widescreen{
     aspect-ratio: 16/9;
 }
@@ -128,6 +133,28 @@ button.toggle.active span{
 }
 #square{
     aspect-ratio: 1/1;
+}
+.buttonContainer.sizeP button{
+    width: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.25rem;
+}
+#mediumP{
+    width: 1.25rem
+}
+#largeP{
+    width: 1.5rem;
+}
+.buttonContainer.changeP button{
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: #aaa;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.buttonContainer.changeP button:hover{
+    background-color: #00aaee;
+    color: #333;
 }
 footer{
     position: absolute;
