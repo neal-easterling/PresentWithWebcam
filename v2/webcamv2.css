@@ -2,6 +2,8 @@
 :root{
     --hue:197;
     --icon-size: 1rem;
+    --trans-short: 300ms ease;
+    --trans-long: 500ms ease;
 
     /*dark color theme*/
     --bg--dark:var(--hue) 0% 15%;
@@ -29,7 +31,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 400ms ease;
+    transition: all var(--trans-short);
 }
 body{
     height: 100dvh;
@@ -64,11 +66,13 @@ footer{
     display: none;
 }
 button{
+    display: grid;
+    place-items: center;
     height: var(--icon-size);
     margin: 0.1rem;
     background-color: #333;
     border: none;
-    border-radius: calc(var(--icon-size) / 10);
+    border-radius: 0.25rem;
 }
 button.active{
     background-color: #00aaee;
@@ -76,6 +80,9 @@ button.active{
 hr{
     border: 1px solid #333;
     margin: 0.3rem  0 0.5rem 0; 
+}
+.icon{
+    border-radius: calc(var(--icon-size) / 10);
 }
 .square{
     aspect-ratio: 1/1;
@@ -88,18 +95,30 @@ hr{
     aspect-ratio: 4/3;
 }
 .toggle{
-    display: grid;
-    place-items: center;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    color: hsl(var(--accent));
+    height: auto;
+    width: 100%;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: hsl(var(--txt-low));
+    border: 2px solid hsl(var(--txt-low));
+    background-color: sl(var(--midtone));
 }
 .toggle.active{
-    color: hsl(var(--txt-low));
+    background-color: hsl(var(--accent));
 }
-.toggle svg{
-    width: calc(var(--icon-size)*0.8);
-    aspect-ratio: 1/1;
+.open{
+    height: auto;
+    width: 100%;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    color: hsl(var(--midtone));
+}
+.open:hover{
+    background-color: hsl(var(--accent));
+    color: hsl(var(--bg));
 }
 .widescreen{
     aspect-ratio: 16/9;
