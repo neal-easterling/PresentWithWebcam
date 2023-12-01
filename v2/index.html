@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present with Webcam</title>
+    <title>presenter4everyone</title>
     <link rel="stylesheet" href="webcamv2.css">
     <link rel="icon" href="./imgs/Apps4logo.ico" sizes="any">
     <link rel="icon" href="./imgs/Apps4Logo.svg" type="image/svg+xml">
@@ -11,69 +11,64 @@
 </head>
 <body>
     <div class="pageContainer">
-        <div class="instructionsModal"></div>
+
         <div class="settingsContainer active">
             <div class="settingsOptions">
                 <div class="settingsGridContainer">
-                    <h2>Settings</h2>
-                    <div class="buttonContainer move">
-                        <button id="move" class="open">
-                            move items
-                        </button>
-                    </div>
-                    
-                    <h3 class="settingsSectionHeader"> Webcam </h3>
-                    <div class="buttonContainer shape">
-                        <h5 class="buttonLabel"> Shape</h5>
-                        <button id="circle" class="circle"></button>
-                        <button id="square" class="square active"></button>
-                        <button id="rectangle" class="rectangle"></button>
-                    </div>
-                    <div class="buttonContainer sizeC">
-                        <h5 class="buttonLabel"> Size</h5>
-                        <button id="smallC" class="icon square small"></button>
-                        <button id="mediumC" class="icon square medium"></button>
-                        <button id="largeC" class="icon square full"></button>
-                    </div>
-                    <div class="buttonContainer mirror">
-                        <h5 class="buttonLabel">Mirror</h5>
-                        <button id="mirror" class="icon toggle active">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="buttonContainer hide">
-                        <h5 class="buttonLabel">Hide</h5>
-                        <button id="mirror" class="icon toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                    <h3 class="settingsSectionHeader"> Presentation </h3>
-                    <div class="buttonContainer ratio">
-                        <h5 class="buttonLabel">Ratio</h5>
-                        <button id="square" class="icon square"></button>
-                        <button id="standard" class="icon rectangle"></button>
-                        <button id="widescreen" class="widescreen active"></button>                    
-                    </div>
-                    <div class="buttonContainer sizeP">
-                        <h5 class="buttonLabel"> Size</h5>
-                        <button id="smallP" class="icon square small"></button>
-                        <button id="mediumP" class="icon square medium active"></button>
-                        <button id="largeP" class="icon square"></button>
-                    </div>
-                    <div class="buttonContainer changeP">
-                        <button id="changeP" class="open">
-                           change slideshow                                                                                        
-                        </button>
-                    </div>
-                </div>
-                <div class="buttonContainer instructionsToggle">
-                    <button id="show" class="toggle">
-                        instructions
-                    </button>
+                    <h2 class="header">Settings</h2> 
+                    <section class="webcamGroup">
+                        <h3 class="header group"> Webcam </h3>
+                        <div class="buttonContainer shape">
+                            <button id="circle" class="icon circle"></button>
+                            <button id="square" class="icon square active"></button>
+                            <button id="rectangle" class="icon rectangle"></button>
+                        </div>
+                        <div class="buttonContainer sizeC">
+                            <button id="smallC" class="icon square small"></button>
+                            <button id="mediumC" class="icon square medium"></button>
+                            <button id="largeC" class="icon square full"></button>
+                        </div>
+                        <div class="buttonContainer mirror">
+                            <button id="mirror" class="toggle active">mirror</button>
+                        </div>
+                        <div class="buttonContainer border">
+                            <button id="border" class="toggle active">border</button>
+                        </div>
+                        <div class="buttonContainer move">
+                            <button id="moveC" class="toggle">move</button>
+                        </div>
+                        <div class="buttonContainer hide">
+                            <button id="hideC" class="toggle">hide</button>
+                        </div>
+                    </section>                  
+                    <section class="presentationGroup">
+                        <h3 class="header group"> Presentation </h3>
+                        <div class="buttonContainer ratio">
+                            <button id="square" class="icon square"></button>
+                            <button id="standard" class="icon rectangle"></button>
+                            <button id="widescreen" class="widescreen active"></button>                    
+                        </div>
+                        <div class="buttonContainer sizeP">
+                            <button id="smallP" class="icon square small"></button>
+                            <button id="mediumP" class="icon square medium active"></button>
+                            <button id="largeP" class="icon square"></button>
+                        </div>
+                        <div class="buttonContainer move">
+                            <button id="moveP" class="toggle">move </button>
+                        </div>
+                        <div class="buttonContainer changeP">
+                            <button id="changeP" class="toggle">change </button>
+                        </div>
+                    </section>
+                    <section class="panels">
+                        <h3 class="header group"> Panels </h3>
+                        <div class="buttonContainer whiteboard">
+                            <button id="show" class="toggle">whiteboard</button>
+                        </div>
+                        <div class="buttonContainer instructions">
+                            <button id="show" class="toggle">instructions</button>
+                        </div>
+                    </section>
                 </div>
             </div>
             <div class="settingsToggle active">
@@ -83,15 +78,33 @@
                   </svg>
             </div>
         </div>
-        <div class="webcamContainer">
-            <video class="hidden" id="webcamStream"></video>  
+        <div class="instructionsContainer">
+            <h1 class="title">Presenter</h1>
+            <h2 class="subtitle">4everyone</h2>
         </div>
-        <div class="presContainer">
-            <iframe id="presentation" class="hidden"></iframe>
+        <div class="loadSlideshowContainer">
+            <h3 class="header">Load Slideshow</h3>
         </div>
-        
+        <div id="webcamPosition" class="control">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" width="20px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>  
         </div>
-        <footer><p>version: 1.2 | &copy; 2023</p></footer>
+        <div class="mediaContainer webcamContainer circle small">
+            <video id="webcamStream" class="media camera"></video>  
+        </div>
+        <div id="presentationPosition" class="control">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" width="20px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>  
+        </div>
+        <div class="mediaContainer presentationContainer medium">
+            <iframe id="presentation" class="media presentation"></iframe>
+        </div>
+        <footer>
+            <p>version: 1.2 | &copy; 2023</p>
+            <img src="./imgs/Apps4Logo.svg" width="25px" height="25px" />
+        </footer>
     </div>
 </body>
 </html>
