@@ -8,7 +8,7 @@ A browser based presentation app that allows you to present your slideshow in th
 
 [Tutorial Video](https://youtu.be/X4dNH7EuPnk)
 
-## Road Map
+## Roadmap
 
 In v2:
 - add webcam shape, size, and position
