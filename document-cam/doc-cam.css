@@ -7,6 +7,7 @@
 }
 
 body{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,38 +33,102 @@ video{
 }
 
 .titleheader{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #222;
+}
+nav{
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
+
+.svg-button-container{
+    cursor: pointer;
+}
+.svg-button-container:hover{
+    color: #fff;
+}
+
 .camera{
     position: relative;
     width: 95%;
     background-color: #222;
     aspect-ratio: 16/9;
-    margin: 1rem;
+    margin: 5rem;
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(20, 20, 20, 0.3);
 }
+
+canvas{
+    display: none;
+}
+
+.button{
+    color: #d9d9d9;
+    background-color: #222;
+    border: 2px solid #d9d9d9;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.button:hover{
+    background-color: #d9d9d9;
+    color: #222;
+    border: 2px solid #222;  
+}
+
+.large-round-button{
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 2rem;
+}
+
+.small-round-button{
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 1rem;
+}
+
 .web-cam-but{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 100; 
+}
+
+.close-but{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: absolute;
+    z-index: 200;
+    top:0;
+    bottom: 0;
+    right: -300px;
+    width: 250px;
+    background-color: #111;
     padding: 1rem;
-    color: #d9d9d9;
-    font-weight: 700;
-    background-color: #222;
-    border: 2px solid #d9d9d9;
-    border-radius: 2rem;
     transition: all 300ms ease;
 }
-.web-cam-but:hover{
-    background-color: #d9d9d9;
-    color: #222;
-    border: 2px solid #222;
-    
+
+.sidebar.active{
+    right: 0;
+}
+
+.sidebar-header{
+    color: rgb(211, 62, 62);
 }
 
 
